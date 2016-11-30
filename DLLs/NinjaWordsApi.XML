@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NinjaWordsApi</name>
+    </assembly>
+    <members>
+        <member name="T:NinjaWordsApi.LexicalCategory">
+            <summary>
+            Specifies the lexical category in which a word falls under
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Noun">
+            <summary>
+            A word that can be used to refer to a person, animal, place, 
+            thing, event, substance, quality, or idea.
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Adjective">
+            <summary>
+            A word that modifies a noun or describes a noun’s referent.
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Verb">
+            <summary>
+            A word that indicates an action, event, or state.
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Pronoun">
+            <summary>
+            A type of noun that refers anaphorically to another noun or noun
+             phrase, but which cannot ordinarily be preceded by a determiner 
+            and rarely takes an attributive adjective.
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Abbreviation">
+            <summary>
+            A shortened or contracted form of a word or phrase, 
+            used to represent the whole.
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Interjection">
+            <summary>
+            An exclamation or filled pause; a word or phrase with no particular
+             grammatical relation to a sentence, often an expression of emotion.
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Preposition">
+            <summary>
+            A closed class of non-inflecting words typically employed to connect 
+            a noun or a pronoun, in an adjectival or adverbial sense, with some other word
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.LexicalCategory.Conjunction">
+            <summary>
+            A part of speech that connects words, sentences, phrases or clauses.
+            </summary>
+        </member>
+        <member name="T:NinjaWordsApi.CategoryNotEnumeratedException">
+            <summary>
+            The exception that is thrown when a extracted category text could not 
+            be represented as an Enum
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.CategoryNotEnumeratedException.CategoryString">
+            <summary>
+            Gets the string that was not valid
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.ExtensionMethods.Remove(System.Text.StringBuilder,System.Text.RegularExpressions.MatchCollection)">
+            <summary>
+            Removes sections of a string using the ranges of matches 
+            in a MatchCollection
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.ExtensionMethods.TrimEnd(System.Text.StringBuilder,System.Char)">
+            <summary>
+            Trims the specified characters from the end of the StringBuilder
+            </summary>
+        </member>
+        <member name="T:NinjaWordsApi.Ninja">
+            <summary>
+            Provides ninja like term lookups   
+            </summary>
+        </member>
+        <member name="F:NinjaWordsApi.Ninja.Host">
+            <summary>
+            The host name for the website
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.CreateLookupLink(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Creates a NinjaWords lookup link from the specified words
+            </summary>
+            <param name="words">The words to appenbd to the link</param>
+            <param name="minimal">Whether to return minimal HTML content</param>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetRandomTerm">
+            <summary>
+            Gets a random term from http://Ninjawords.com
+            </summary>
+            <exception cref="T:System.Net.WebException"></exception>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetRandomTermAsync">
+            <summary>
+            Gets a random term from http://Ninjawords.com asyncronously
+            </summary>
+            <exception cref="T:System.Net.WebException"></exception>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetTerms(System.String[])">
+            <summary>
+            Gets an array of NinjaTerms from comma seperated terms
+            <example>Example: This,is,code</example>
+            </summary>
+            <returns>An empty array if nothing found</returns>
+            <param name="terms">An array of terms</param>
+            <exception cref="T:System.Net.WebException"></exception>
+            <exception cref="T:NinjaWordsApi.CategoryNotEnumeratedException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetTerms(System.String)">
+            <summary>
+            Gets an array of NinjaTerms from comma seperated terms
+            <example>Example: This,is,code</example>
+            </summary>
+            <returns>An empty array if nothing found</returns>
+            <param name="terms">An array of terms</param>
+            <exception cref="T:System.Net.WebException"></exception>
+            <exception cref="T:NinjaWordsApi.CategoryNotEnumeratedException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetTermsAsync(System.String[])">
+            <summary>
+            Gets an array of NinjaTerms from an array of terms asyncronously
+            </summary>
+            <param name="terms">An array of terms</param>
+            <returns>A Task that yeilds NinjaTerms</returns>
+            <exception cref="T:System.Net.WebException"></exception>
+            <exception cref="T:NinjaWordsApi.CategoryNotEnumeratedException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetTermsAsync(System.String)">
+            <summary>
+            Gets an array of NinjaTerms from comma seperated terms asyncronously
+            <example>Example: This,is,code</example>
+            </summary>
+            <returns>A Task that yeilds NinjaTerms</returns>
+            <param name="terms">An array of terms</param>
+            <exception cref="T:System.Net.WebException"></exception>
+            <exception cref="T:NinjaWordsApi.CategoryNotEnumeratedException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.DownloadNinjaPage(System.String)">
+            <summary>
+            Downloads a NinjaWords page using UTF8 encoding
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.RemoveUnwantedData(System.String)">
+            <summary>
+            Remove spans and links to avoid unnessearily complex regex patterns.
+            Also completely remove the spans that define the definition marker
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetUndefinedTerms(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Creates an array of undefined NinjaTerms from the specified word list
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.GetAboveCategory(System.String,System.Int32)">
+            <summary>
+            Gets the category closest and above the specified position
+            </summary>
+            <param name="element">An element containing both the entry and category</param>
+            <param name="index">The index to look above</param>
+            <exception cref="T:NinjaWordsApi.CategoryNotEnumeratedException"></exception>
+        </member>
+        <member name="M:NinjaWordsApi.Ninja.ExtractNinjaWord(System.String)">
+            <summary>
+            Parses an element to a NinjaTerm
+            </summary>
+            <param name="element">The element that contains one term</param>
+            <returns>An undefined term if nothing found</returns>
+        </member>
+        <member name="P:NinjaWordsApi.Ninja.RandomLink">
+            <summary>
+            Gets a link to a random definition on a minimal webpage
+            </summary>
+        </member>
+        <member name="T:NinjaWordsApi.NinjaEntry">
+            <summary>
+            Represents an entry for one word. A word may consist of
+            one or more entries (words can have more than one definition and so forth)
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.NinjaEntry.#ctor(NinjaWordsApi.LexicalCategory,System.String,System.String)">
+            <summary>
+            Creates an instance of <see cref="T:NinjaWordsApi.NinjaEntry"/>
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.NinjaEntry.Category">
+            <summary>
+            Gets the category the word falls under
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.NinjaEntry.Definition">
+            <summary>
+            Gets the text that defines the word
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.NinjaEntry.Example">
+            <summary>
+            Gets an example for the word
+            </summary>
+        </member>
+        <member name="T:NinjaWordsApi.NinjaTerm">
+            <summary>
+            Represents a term that can be looked up on http://Ninjawords.com
+            </summary>
+        </member>
+        <member name="M:NinjaWordsApi.NinjaTerm.#ctor(System.String)">
+            <summary>
+            Creates an instance of NinjaTerm. This term will be undefined 
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.NinjaTerm.Entries">
+            <summary>
+            Gets the definition entries for this term
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.NinjaTerm.Term">
+            <summary>
+            Gets the text of this term
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.NinjaTerm.Synonyms">
+            <summary>
+            Gets the available synonyms for this term
+            </summary>
+        </member>
+        <member name="P:NinjaWordsApi.NinjaTerm.Defined">
+            <summary>
+            Gets whether this term has any entries
+            </summary>
+        </member>
+    </members>
+</doc>

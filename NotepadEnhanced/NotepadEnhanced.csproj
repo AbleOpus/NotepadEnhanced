@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88B053C0-CB77-4427-A946-62AC3BFBA247}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NotepadEnhanced</RootNamespace>
+    <AssemblyName>Notepad Enhanced</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <Win32Resource>
+    </Win32Resource>
+    <ManifestCertificateThumbprint>D6A0307AE128730E647DDB2FBC335BF2BB33D13E</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Notepad Enhanced_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Documents and Settings\Owner\Desktop\OS ISOs\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AboPersistance">
+      <HintPath>..\DLLs\AboPersistance.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\DLLs\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NinjaWordsApi">
+      <HintPath>..\DLLs\NinjaWordsApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FontSelection.cs" />
+    <Compile Include="RecentList.cs" />
+    <Compile Include="Forms\controls\ColorPickerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\ColorPickerControl.Designer.cs">
+      <DependentUpon>ColorPickerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\controls\ControlExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\FontPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\IlluminateButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\LookupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\LookupPanel.Designer.cs">
+      <DependentUpon>LookupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\controls\PlainTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\PromptButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\ReadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\ReadingForm.Designer.cs">
+      <DependentUpon>ReadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\controls\ScrollingLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\ScrollingLabel.designer.cs">
+      <DependentUpon>ScrollingLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\controls\PlainTextTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\DockedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\DockedPanel.Designer.cs">
+      <DependentUpon>DockedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forms\AddRefactexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\AddRefactexForm.Designer.cs">
+      <DependentUpon>AddRefactexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forms\EditRefactexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\EditRefactexForm.Designer.cs">
+      <DependentUpon>EditRefactexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forms\RefactexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\RefactexForm.Designer.cs">
+      <DependentUpon>RefactexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppState\LastSession.cs" />
+    <Compile Include="Forms\forms\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Forms\controls\RefactexPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\RefactexPanel.Designer.cs">
+      <DependentUpon>RefactexPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refactexing\RefactexPresets.cs" />
+    <Compile Include="Refactexing\Refactex.cs" />
+    <Compile Include="Forms\controls\RegexOptionsCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SaveAnimation.cs" />
+    <Compile Include="Forms\controls\panels\FindPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\FindPanel.Designer.cs">
+      <DependentUpon>FindPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\controls\panels\GotoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\GotoPanel.Designer.cs">
+      <DependentUpon>GotoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppState\SingleInstanceBase.cs" />
+    <Compile Include="Forms\controls\panels\LargePanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\LargePanelBase.Designer.cs">
+      <DependentUpon>LargePanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\controls\panels\BottomPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\BottomPanelBase.Designer.cs">
+      <DependentUpon>BottomPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\SupportedCultures.cs" />
+    <Compile Include="SystemTrayIcon.cs" />
+    <Compile Include="Forms\controls\HotTrackedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageDialog.cs" />
+    <Compile Include="Forms\forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\controls\panels\ReplacePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\controls\panels\ReplacePanel.Designer.cs">
+      <DependentUpon>ReplacePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing.cs" />
+    <Compile Include="AppState\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="AppState\Settings.cs" />
+    <EmbeddedResource Include="Forms\controls\panels\DockedPanel.resx">
+      <DependentUpon>DockedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\panels\LookupPanel.resx">
+      <DependentUpon>LookupPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\ColorPickerControl.resx">
+      <DependentUpon>ColorPickerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\ReadingForm.resx">
+      <DependentUpon>ReadingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\ScrollingLabel.resx">
+      <DependentUpon>ScrollingLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\AddRefactexForm.resx">
+      <DependentUpon>AddRefactexForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\EditRefactexForm.resx">
+      <DependentUpon>EditRefactexForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\RefactexForm.resx">
+      <DependentUpon>RefactexForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\panels\FindPanel.resx">
+      <DependentUpon>FindPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\panels\GotoPanel.resx">
+      <DependentUpon>GotoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\panels\LargePanelBase.resx">
+      <DependentUpon>LargePanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\panels\ReplacePanel.resx">
+      <DependentUpon>ReplacePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\panels\BottomPanelBase.resx">
+      <DependentUpon>BottomPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\RefactexPanel.es.resx">
+      <DependentUpon>RefactexPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\RefactexPanel.fr.resx">
+      <DependentUpon>RefactexPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\controls\RefactexPanel.resx">
+      <DependentUpon>RefactexPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Product Documentation.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
